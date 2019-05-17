@@ -1,0 +1,7 @@
+{
+	"name": "chess",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/dogun1228/chess.git",
+	"license": "MIT"
+}
