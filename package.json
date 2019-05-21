@@ -1,7 +1,11 @@
 {
 	"name": "chess",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "src/app.js",
 	"repository": "https://github.com/dogun1228/chess.git",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.17.0",
+		"socket.io": "^2.2.0"
+	}
 }
