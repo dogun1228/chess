@@ -4,7 +4,55 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Chess!</title>
+		<title>Chating!</title>
 	</head>
-	<body></body>
+	<body>
+		<script src="/socket.io/socket.io.js"></script>
+		<div id="box">
+			<div id="chatBox"></div>
+			<div id="chatBar">
+				<button id="send">보내기</button>
+				<input type="text" name="chat" id="chat" class="textInput" />
+				<input type="text" name="name" id="name" class="textInput" />
+			</div>
+		</div>
+		<script src="./client.js"></script>
+	</body>
+	<style>
+		button {
+			background: bisque;
+			border: 1px solid silver;
+			border-radius: 5px;
+		}
+		.textInput {
+			border: 1px solid silver;
+			border-radius: 5px;
+		}
+		#box {
+			margin: 1em 1em;
+			padding: 0.5em 0.5em;
+			width: 40em;
+			border: 3px solid black;
+			border-radius: 10px;
+		}
+		#chatBox {
+			overflow: scroll;
+			height: 20em;
+			border: 2px solid silver;
+		}
+		#chatBar {
+			margin: 0.5em 0 0 0;
+			display: flex;
+			flex-direction: row-reverse;
+		}
+		#name {
+			margin: 0 0.5em 0 0;
+			width: 10em;
+			flex: 0 1 auto;
+		}
+		#chat {
+			margin: 0 0.5em 0 0;
+			flex: 1 1 auto;
+		}
+	</style>
 </html>

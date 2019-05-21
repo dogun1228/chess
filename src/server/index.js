@@ -13,4 +13,12 @@ app.get('/', (req, res) => {
 
 app.use(express.static(path.resolve(__dirname, '../client')))
 
+io.on('connection', socket => {
+	console.log('user connceted:' + socket.id)
+	socket.on('send', msg => {
+		console.log(msg)
+		io.emit('receive', msg)
+	})
+})
+
 module.exports = server
